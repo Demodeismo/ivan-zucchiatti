@@ -2,13 +2,12 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MindAR Quadro</title>
 
-    <!-- A-Frame PRIMA -->
+    <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 
-    <!-- MindAR per A-Frame (UNA SOLA VOLTA) -->
+    <!-- MindAR per A-Frame -->
     <script src="https://unpkg.com/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 
     <style>
@@ -30,17 +29,20 @@
       embedded
     >
       <a-assets>
+        <!-- IMMAGINE OPERA 1 -->
         <img id="quadro" src="quadro.jpg" />
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
+      <!-- TARGET OPERA 1 -->
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane
           src="#quadro"
           position="0 0 0"
           height="0.7"
-          width="0.5">
+          width="0.5"
+          rotation="0 0 0">
         </a-plane>
       </a-entity>
     </a-scene>
